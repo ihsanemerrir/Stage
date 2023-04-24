@@ -1,7 +1,8 @@
 #!/bin/bash
 start=$1
 end=$2
-i=$startwhile ((i <=end))
+i=$start
+while ((i <=end))
 do
     echo -n " ;$i"
     ((++i))
