@@ -1,0 +1,4 @@
+test:
+  tags: [linux,small]
+  script: 
+    - bash test1.sh
