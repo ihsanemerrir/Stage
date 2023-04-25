@@ -1,5 +1,4 @@
 test:
-  tags: [linux,small]
-  image: ubuntu
+  tags: [test]
   script: 
     - bash test1.sh 2 7
