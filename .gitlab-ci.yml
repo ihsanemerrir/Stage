@@ -1,4 +1,25 @@
+#Permet d'éxecuter des tâches dans l'ordre:
+stages:
+  - pre
+  - test
+  - post
+
+  #La tâche "start_vm" est configurée pour être exécutée dans la première étape "pre"
+start_vm:
+  stage: pre
+  tags: [vm]
+  script:
+    - python testvm.py start
+
 test:
+  stage: test
   tags: [test]
   script: 
     - bash test1.sh 2 7
+
+#La tâche "stop_vm" est configurée pour être exécutée dans la dernère étape "post"
+stop_vm:
+  stage: post
+  tags: [vm]
+  script:
+    - python testvm.py stop
