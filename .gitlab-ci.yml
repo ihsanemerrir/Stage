@@ -23,3 +23,4 @@ stop_vm:
   tags: [vm]
   script:
     - python testvm.py stop
+    
