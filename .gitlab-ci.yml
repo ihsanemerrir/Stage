@@ -4,9 +4,9 @@ stages:
   - test
   - post
 
-  #La tâche "start_vm" est configurée pour être exécutée dans la première étape "pre"
-start_vm:
-  stage: pre
+#La tâche "start_vm" est configurée pour être exécutée dans la première étape "pre"
+start_vm: 
+  stage: pre 
   tags: [vm]
   script:
     - python testvm.py start
